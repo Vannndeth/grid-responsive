@@ -1,0 +1,469 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&family=Sixtyfour&display=swap');
+
+/* For Mobile */
+@media (min-width: 300px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f5f4;
+  }
+  .header {
+    height: 10%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .navbar {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      & .logo p{
+        visibility: hidden;
+      }
+      & .searchBar {
+        height: 70px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: -70px;
+        & div {
+          width: 100%;
+          height: 40px;
+          display: flex;
+          padding-left: 20px;
+          align-items: center;
+          background-color: #f6f3f3;
+          border-radius: 10px;
+          color: rgb(129, 128, 128);
+        }
+      }
+      & .loginBtn {
+        width: 20%;
+        position: relative;
+        right: 20px;
+        & div {
+          display: flex;
+          height: 40px;
+          width: 90%;
+          justify-content: center;
+          align-items: center;
+          background-color: #e60022;
+          color: white;
+          border-radius: 10px;
+        }
+      }
+    }
+    
+  }
+  main {
+    & .image-section {
+      display: grid;
+      grid-template: repeat(10, 5vw) / repeat(1, 1fr);
+      padding-top: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      gap: 30px;
+      & .gallary-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        transition: transform 0.3s ease;
+      }
+      .gallary-image:hover {
+        transform: scale(1.04); /* Adjust the scaling factor as needed */
+      }
+  
+      /* Animation effect before hover */
+      .gallary-image {
+        transform: scale(1); /* Initial scale */
+        transition: transform 0.3s ease; /* Smooth transition */
+      }
+  
+      .gallary-image:hover {
+        transform: scale(1.04); /* Adjust the scaling factor as needed */
+      }
+      & div:nth-child(1) {
+        grid-row: span 5;
+      }
+      & div:nth-child(2) {
+        grid-column-start: 2;
+        grid-row: span 7;
+      }
+      & div:nth-child(3) {
+        grid-row: span 5;
+      }
+      & div:nth-child(3) {
+        grid-row: span 5;
+      }
+      & div:nth-child(4) {
+        grid-row: span 7;
+      }
+      & div:nth-child(5) {
+        grid-row: span 5;
+      }
+      & div:nth-child(6) {
+        grid-row: span 5;
+      }
+      & div:nth-child(7) {
+        grid-row: span 5;
+      }
+      & div:nth-child(8) {
+        grid-row: span 5;
+      }
+    }
+    .gallary-full-screen {
+        & .container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+        & #expandedImg {
+          object-fit: cover;
+          max-width: 80vw; /* Adjust as needed */
+          max-height: 80vh; /* Adjust as needed */
+          border-radius: 20px;
+          margin: auto; /* Center horizontally */
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      & .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+      }
+      .gallary-full-screen {display: none; }
+  }
+}
+
+/* For Tablet */
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f5f4;
+  }
+  .header {
+    height: 10%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .navbar {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      & .logo p{
+        visibility: visible;
+        color: red;
+        font-weight: bold;
+        padding: 35px;
+        font-size: 24px;
+        font-family: 'Protest Strike', sans-serif;
+      }
+      & .searchBar {
+        height: 70px;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & div {
+          width: 70%;
+          height: 40px;
+          display: flex;
+          padding-left: 20px;
+          align-items: center;
+          background-color: #f6f3f3;
+          border-radius: 10px;
+          color: rgb(129, 128, 128);
+        }
+      }
+      & .loginBtn {
+        width: 20%;
+        & div {
+          display: flex;
+          height: 40px;
+          width: 50%;
+          justify-content: center;
+          align-items: center;
+          background-color: #e60022;
+          color: white;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  main {
+    & .image-section {
+      display: grid;
+      grid-template: repeat(10, 5vw) / repeat(2, 1fr);
+      padding-top: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      gap: 30px;
+      & .gallary-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        transition: transform 0.3s ease;
+      }
+      .gallary-image:hover {
+        transform: scale(1.04); /* Adjust the scaling factor as needed */
+      }
+  
+      /* Animation effect before hover */
+      .gallary-image {
+        transform: scale(1); /* Initial scale */
+        transition: transform 0.3s ease; /* Smooth transition */
+      }
+  
+      .gallary-image:hover {
+        transform: scale(1.04); /* Adjust the scaling factor as needed */
+      }
+      & div:nth-child(1) {
+        grid-row: span 5;
+      }
+      & div:nth-child(2) {
+        grid-column-start: 2;
+        grid-row: span 7;
+      }
+      & div:nth-child(3) {
+        grid-row: span 5;
+      }
+      & div:nth-child(3) {
+        grid-row: span 5;
+      }
+      & div:nth-child(4) {
+        grid-row: span 7;
+      }
+      & div:nth-child(5) {
+        grid-row: span 5;
+      }
+      & div:nth-child(6) {
+        grid-row: span 5;
+      }
+      & div:nth-child(7) {
+        grid-row: span 5;
+      }
+      & div:nth-child(8) {
+        grid-row: span 5;
+      }
+    }
+    .gallary-full-screen {
+        & .container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+        & #expandedImg {
+          object-fit: cover;
+          max-width: 80vw; /* Adjust as needed */
+          max-height: 80vh; /* Adjust as needed */
+          border-radius: 20px;
+          margin: auto; /* Center horizontally */
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      & .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+      }
+      .gallary-full-screen {
+        display: none; 
+      }
+  }
+}
+
+
+/* For Desktop */
+@media (min-width: 992px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f5f4;
+  }
+  .header {
+    height: 10%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .navbar {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      & .logo p{
+        visibility: visible;
+        color: red;
+        font-weight: bold;
+        padding: 35px;
+        font-size: 28px;
+        font-family: 'Protest Strike', sans-serif;
+        
+      }
+      & .searchBar {
+        height: 70px;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & div {
+          width: 80%;
+          height: 40px;
+          display: flex;
+          padding-left: 20px;
+          align-items: center;
+          background-color: #f6f3f3;
+          border-radius: 10px;
+          color: rgb(129, 128, 128);
+        }
+      }
+      & .loginBtn {
+        width: 20%;
+        & div {
+          display: flex;
+          height: 40px;
+          width: 30%;
+          justify-content: center;
+          align-items: center;
+          background-color: #e60022;
+          color: white;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  main {
+    & .image-section {
+      display: grid;
+      grid-template: repeat(10, 5vw) / repeat(4, 1fr);
+      padding-top: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      gap: 30px;
+      & .gallary-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        transition: transform 0.3s ease;
+      }
+      .gallary-image:hover {
+        transform: scale(1.04); /* Adjust the scaling factor as needed */
+      }
+  
+      /* Animation effect before hover */
+      .gallary-image {
+        transform: scale(1); /* Initial scale */
+        transition: transform 0.3s ease; /* Smooth transition */
+      }
+  
+      .gallary-image:hover {
+        transform: scale(1.04); /* Adjust the scaling factor as needed */
+      }
+      & div:nth-child(1){
+        grid-row: span 5;
+      }
+      & div:nth-child(2) {
+        grid-column-start: 2;
+        grid-row: span 7;
+      }
+      & div:nth-child(3) {
+        grid-row: span 5;
+      }
+      & div:nth-child(3) {
+        grid-row: span 5;
+      }
+      & div:nth-child(4) {
+        grid-row: span 7;
+      }
+      & div:nth-child(5) {
+        grid-row: span 5;
+      }
+      & div:nth-child(6) {
+        grid-row: span 5;
+      }
+      & div:nth-child(7) {
+        grid-row: span 5;
+      }
+      & div:nth-child(8) {
+        grid-row: span 5;
+      }
+    }
+  }
+  .gallary-full-screen {
+    & .container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    & #expandedImg {
+      object-fit: cover;
+      max-width: 80vw; /* Adjust as needed */
+      max-height: 80vh; /* Adjust as needed */
+      border-radius: 20px;
+      margin: auto; /* Center horizontally */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  & .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  .gallary-full-screen {display: none; }
+
+}
